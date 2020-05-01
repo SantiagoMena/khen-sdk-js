@@ -1,7 +1,8 @@
 import io from 'socket.io-client';
 
 const socket = io('http://localhost:3000');
-const publicIp = require('public-ip');
+const publicIp = require('./core/comandos/publicIp');
+const redireccionar = require('./core/comandos/redireccionar');
 
 socket.on('comando', async function( data ) {
     const { comando } = data;
@@ -9,13 +10,11 @@ socket.on('comando', async function( data ) {
 
     switch (comando) {
         case 'publicIp':
-            response = {
-                error: false,
-                data: {
-                    ipv4: await publicIp.v4(),
-                    ip6: await publicIp.v6()
-                }
-            }
+            response = await publicIp();
+            break;
+
+        case 'redireccionar':
+            response = await redireccionar(data.options);
             break;
     
         default:
