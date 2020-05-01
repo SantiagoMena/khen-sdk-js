@@ -1,0 +1,23 @@
+{
+  "name": "khen-sdk",
+  "version": "1.0.0",
+  "description": "KHEN SDK for web",
+  "main": "khen.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SantiagoMena/khen-sdk-js.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SantiagoMena/khen-sdk-js/issues"
+  },
+  "homepage": "https://github.com/SantiagoMena/khen-sdk-js#readme",
+  "dependencies": {
+    "public-ip": "^4.0.1",
+    "socket.io-client": "^2.3.0"
+  }
+}
