@@ -1,6 +1,7 @@
-<a href="https://santiagomena.github.io/khen-sdk-js/" target="_blank">
-  <h1>[SDK] Kit de Heramientas de Explotación Nativa</h1>
-</a>
+<h1>
+  <a href="https://santiagomena.github.io/khen-sdk-js/" target="_blank">[SDK] Kit de Heramientas de Explotación Nativa</a>
+</h1>
+
 SDK Para la web
 <ul>
   <li>Build: webpack</li>
